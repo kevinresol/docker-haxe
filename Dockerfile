@@ -15,7 +15,7 @@ ENV LD_LIBRARY_PATH $NEKOPATH
 ENV PATH $NEKOPATH:$PATH
 
 RUN \
-  apt-get update && apt-get install -y wget && \
+  apt-get update && apt-get install -y wget git && \
   mkdir -p $NEKOPATH && mkdir -p $HAXEPATH && \
   wget $NEKOURL && tar xzf $NEKOFILE --strip=1 -C $NEKOPATH  && \
   wget $HAXEURL && tar xzf $HAXEFILE --strip=1 -C $HAXEPATH  && \
