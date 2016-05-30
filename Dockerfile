@@ -1,18 +1,15 @@
 FROM debian:stable
 
-ENV HAXEVER 3.3.0-rc.1
-ENV HAXEFILE haxe-$HAXEVER-linux64.tar.gz
-ENV HAXEURL http://haxe.org/website-content/downloads/$HAXEVER/downloads/$HAXEFILE
-ENV HAXEPATH /root/haxe
-ENV HAXE_STD_PATH $HAXEPATH/std/
-ENV PATH $HAXEPATH:$PATH
-
-ENV NEKOVER 2.1.0
-ENV NEKOFILE neko-$NEKOVER-linux64.tar.gz
-ENV NEKOURL http://nekovm.org/media/$NEKOFILE
-ENV NEKOPATH /root/neko
-ENV LD_LIBRARY_PATH $NEKOPATH
-ENV PATH $NEKOPATH:$PATH
+ENV HAXEVER=3.3.0-rc.1 NEKOVER=2.1.0 \
+    HAXEFILE=haxe-$HAXEVER-linux64.tar.gz \
+    HAXEURL=http://haxe.org/website-content/downloads/$HAXEVER/downloads/$HAXEFILE \
+    HAXEPATH=/root/haxe \
+    HAXE_STD_PATH=$HAXEPATH/std/ \
+    NEKOFILE=neko-$NEKOVER-linux64.tar.gz \
+    NEKOURL=http://nekovm.org/media/$NEKOFILE \
+    NEKOPATH=/root/neko \
+    LD_LIBRARY_PATH=$NEKOPATH \
+    PATH=$HAXEPATH:$NEKOPATH:$PATH
 
 RUN \
   apt-get update && apt-get install -y wget git && \
