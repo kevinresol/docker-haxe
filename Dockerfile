@@ -1,6 +1,6 @@
 FROM debian:stable
 
-ENV HAXEVER=3.0.1 \
+ENV HAXEVER=3.1.0 \
     NEKOVER=2.0.0 \
     HAXEPATH=/root/haxe \
     HAXE_STD_PATH=/root/haxe/std/ \
