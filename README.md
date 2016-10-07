@@ -12,6 +12,7 @@ Tags:
 - `kevinresol/haxe:<version>` - E.g. kevinresol/haxe:3.3.0-rc.1
 - `kevinresol/haxe:git` - Latest git commit from the haxe repo
 
-## Need more?
+## How to use
 
-If you are using this container to run tests, you may want to try [travix](https://github.com/back2dos/travix), which automatically installs the platform dependencies.
+
+Obviously you need a docker environment... (more to come, for now please read [here](https://github.com/kevinresol/docker-haxe/issues/1#issuecomment-251718651))
