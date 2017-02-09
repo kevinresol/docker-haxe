@@ -1,3 +1,5 @@
+# Dockerfile for Haxe is officially supported by the HaxeFoundation now. Check it out at https://github.com/HaxeFoundation/docker-library-haxe
+
 # docker-haxe
 Dockerfile for Haxe
 
