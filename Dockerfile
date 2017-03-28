@@ -8,7 +8,7 @@ ENV NEKOVER=2.1.0 \
 RUN export NEKOFILE=neko-$NEKOVER-linux64.tar.gz && \
     export NEKOURL=http://nekovm.org/media/$NEKOFILE && \
     apt-get update && \
-    apt-get install zlib1g-dev wget -y && \
+    apt-get install zlib1g-dev wget camlp4 pcre -y && \
     mkdir -p $NEKOPATH && \
     wget $NEKOURL && tar xzf $NEKOFILE --strip=1 -C $NEKOPATH && rm $NEKOFILE && \
     git clone --recursive git://github.com/HaxeFoundation/haxe.git && \
